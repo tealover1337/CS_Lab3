@@ -95,7 +95,7 @@ void stack_add(Stack* stack, T element, size_t index) {
     for (size_t i = 0; i < temp->cap; i++) {
         stack_push(temp, stack_pop(stack));
     }
-    stack_append(stack, element);
+    stack_push(stack, element);
     for (size_t i = 0; i < temp->cap; i++) {
         stack_push(stack, stack_pop(temp));
     }
